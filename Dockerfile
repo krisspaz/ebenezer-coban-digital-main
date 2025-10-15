@@ -29,7 +29,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 # Healthcheck simple: comprobar que el index responde
 HEALTHCHECK --interval=10s --timeout=5s --start-period=5s --retries=3 \
-	CMD wget -qO- http://localhost/ >/dev/null || exit 1
+	CMD wget -qO- http://127.0.0.1/ >/dev/null || exit 1
 
 # Exponer el puerto 80
 EXPOSE 80

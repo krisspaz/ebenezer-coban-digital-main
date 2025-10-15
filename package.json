@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "docker:build": "docker build -t ebenezer-app:latest .",
-    "docker:run": "docker run -p 8080:80 --rm --name ebenezer-app ebenezer-app:latest",
+    "docker:run": "sh -c 'docker start -a ebenezer-app || docker run -p 8080:80 --name ebenezer-app ebenezer-app:latest'",
     "docker:stop": "docker stop ebenezer-app || true"
   },
   "dependencies": {
